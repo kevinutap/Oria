@@ -1,0 +1,194 @@
+
+.main._md.md-primoExplore-theme.layout-align-center-start.layout-row.flex {
+    flex-flow: row nowrap;
+}
+/*Aktiver denne hvis fasettene er pÃ¥ hÃ¸yre side og du Ã¸nsker dem pÃ¥ venstre side*/
+/*
+.main._md.md-primoExplore-theme.layout-align-center-start.layout-row.flex.padded-container {
+   display: -webkit-flex; !* Safari *!
+    -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+*/
+
+/*Aktiver denne hvis fasettene er pÃ¥ venstre side og du Ã¸nsker dem pÃ¥ hÃ¸yre side*/
+/*
+.main._md.md-primoExplore-theme.layout-align-center-start.layout-row.flex.padded-container {
+   display: -webkit-flex; !* Safari *!
+    -webkit-flex-flow: row-reverse wrap; !* Safari 6.1+ *!
+    display: flex;
+    flex-flow: row wrap;
+}
+*/
+
+/*Endrer farge pÃ¥ toppbanneret (der logoen er)*/
+.prm-primary-bg.prm-hue1, prm-spinner.prm-hue1.overlay-cover.light-on-dark::after, prm-topbar .top-nav-bar, prm-search-bar.prm-hue1 {
+    background-color: #ffdc00; 
+}
+
+/*Endrer fargen pÃ¥ feltet bak sÃ¸kefeltet*/
+.prm-primary-bg, prm-spinner.overlay-cover.light-on-dark::after, prm-search-bar {
+    background-color: inherit; 
+}
+
+/*Endrer bakgrunnsfargen pÃ¥ feltet under sÃ¸kefeltet*/
+md-content, md-content.md-primoExplore-theme {
+  /* background-color: #3cb371; */
+}
+
+/*Endrer fargen pÃ¥ tittel i trefflisten og detaljert visning*/
+prm-brief-result .item-title {
+  /* color: #2e8b57; */
+}
+
+/*Endrer bakgrunnsfarge pÃ¥ antall treff i trefflisten*/
+prm-search-result-list .results-title.layout-row {
+  /* background-color: #2e8b57; */
+}
+
+/*Endrer fargen og skillelinje pÃ¥ postene i trefflisten*/
+prm-search-result-list md-list-item {
+  /* border-bottom: #000000; */
+  /* background-color: #e2e2e2; */
+}
+
+/*Endrer bakgrunnsfargen pÃ¥ trefflisten ved innlastning av nye/flere poster*/
+#mainResults {
+  /* background-color: #e2e2e2;*/
+}
+
+
+/*Ta bort <br/> i treffliste */
+span.media-delimiter {
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* Forside bilde */
+#hioaforside_jpg {
+  display: block;
+  width:100%;
+}
+
+/* Bytte plass Endnote (original Endnotedesktop) og Endnoteweb (original  endnote) */
+li#EndNote {
+    order: 1;
+}
+
+/* hÃƒÂ¸yre og venstre blokk - sette samme hÃƒÂ¸yde */
+md-card#soeketips, 
+md-card#logginn{
+    height: 31rem;
+}
+
+@media (max-width: 599px){
+  md-card#soeketips, 
+  md-card#logginn{
+    height: 33rem;
+}
+}
+
+/*  sak8: md-card md-card-title flex-grow=1 og md-card#soeketips height: 100% 
+md-card-title#soeketipsTittel {
+    flex-grow: 0;
+}
+*/
+
+/* overskriften til sÃ¸ketips og logginnforaa */
+.md-headline {
+    font-weight: 400 !important;
+}
+
+/* Globalmeny: finne ikke - bredde */
+#mainMenu > a:nth-child(3) {
+  min-width: 7.5em; }
+
+/* Globalmeny: hva sysnes du om nye oria - bredde */
+#mainMenu > a:nth-child(4) {
+  min-width: 8em; }
+
+/* Globalmeny: e-tidsskrifter - bredde */
+#mainMenu > a:nth-child(5) {
+  min-width: 7.5em; }
+
+/* Globalmeny utvidet : skjuler tagger  */
+div.custom-links-container > md-card:nth-child(11) {
+ display: none }
+ 
+/* sak9: ipad header problem etter Ã¥ trykke pÃ¥ TILPASS DINE RESULTATER */
+primo-explore.__sm.__gt-xs div#facets {
+    position: absolute;
+}
+
+/* sak12: teksten 'Sjekk beholdning hos' er i grÃ¸nn skrift, ikke orange */
+span.availability-status.check_holdings_in_institution {
+    color: #0f7d00;
+}
+
+/*Justerer lenkene i listen i footerboksen*/
+.EXLFooterLinksContainer ul li {
+  padding-left: 0.8em;
+  text-indent: 0em !important;
+}
+
+/* Logo - topp globalmeny hÃ¸yde */
+prm-topbar {
+    height: 80px !important;
+}
+
+@media (max-width: 1100px){
+prm-topbar {
+    height: 60px !important;
+}
+}
+
+/*Beskjed for bok bestillingen */
+html[lang="no"] prm-full-view[class*="book"] prm-alma-more-inst::before {
+    content: "Hvis boken er tilgjengelig ved ditt studiested (Pilestredet eller Kjeller) kan studenter ikke bestille den. Kom og l\00e5n boken p\00e5 \00a0 biblioteket. \A\A"; 
+    white-space: pre-line;
+    color: red;
+}
+
+html[lang="nn"] prm-full-view[class*="book"] prm-alma-more-inst::before {
+    content: "Viss boka er tilgjengeleg ved din studiestad (Pilestredet eller Kjeller) kan studentar ikkje bestille ho. Kom og l\00e5n boken p\00e5 \00a0 biblioteket. \A\A"; 
+    white-space: pre-line;
+    color: red;
+}
+
+html[lang="en"] prm-full-view[class*="book"] prm-alma-more-inst::before {
+    content: "If the book is available at your campus (Pilestredet or Kjeller) students may not request it. Please visit the library to borrow the book.  \A\A"; 
+    white-space: pre-line;
+    color: red;
+}
+
+prm-main-menu[menu-type="menu"] .md-button {
+    color: #000000 !important;
+}
+
+/*Avansert-sÃƒÂ¸k-knappen med blÃƒÂ¥ bakgrunn*/
+prm-search-bar div.layout-fill.layout-column div.search-wrapper.dark-toolbar.prm-top-bar-container.main-header-row.layout-row div.search-switch-buttons button{ 
+	background-color:#00769e !important;
+}
+
+prm-logo .product-logo {
+    padding: 0em !important;
+}
+
+/* icon farge pÃ¥ topmenyen*/
+prm-topbar prm-icon md-icon svg {
+    color: #000000 !important;
+}
+
+/*logg pÃ¥ og meny pÃ¥ topmenyen*/
+prm-topbar prm-user-area-expandable span {
+    color: #000000 !important;
+}
+
+/*ta bort lenke skyggen*/
+div.product-logo>a.md-primoExplore-theme {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
